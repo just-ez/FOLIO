@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: #aaa;
+    text-decoration: none;
+}
+body {
+    background: #111;
+    color: #aaa;
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+    height: 100svi;
+}
+body::before,
+body::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100svi;
+    z-index: 999;
+    opacity: 20%;
+}
+
+body::before {
+    background: #eee;
+    filter: url(#grainy);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.blob {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: blob-anime 20s infinite;
+    filter: blur(100px);
+}
+svg {
+    display: none;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    gap: 24rem;
+    position: relative;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav div {
+     display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    line-height: 1em;
+    padding: .5em;
+    font-weight: 400;
+    gap: 10em;
+}
+
+#btn  {
+    width: fit-content;
+    font-size: 1rem;
+    border: 1px solid #eeeeee3d;
+    padding: .2rem;
+    border-radius: .5em;
+    position: absolute;
+   bottom: 1em;
+   left: 1em;
+   cursor: pointer;
+   z-index: 9999;
+   background: transparent;
+   color: #eee;
+   overflow: hidden;
+}
+ #btn .bg{
+    /* content: ''; */
+    width: 100%;
+    height: 0%;
+    background-color: orangered;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 300ms height;
+}
+
+.hero-text #btn:hover > .bg {
+    height: 100%;
+}
+.hero-text {
+    font-size: 4em;
+    font-weight: bolder;
+    margin-left: 2em;
+    position: relative;
+    /* scale: 1 2; */
+    display: inline;
+}
+
+.hero-text span {
+    margin-left: 3em;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 1em;
+    right: 4em;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.arrow-container span {
+   animation-name: arrow-anime;
+   animation-timing-function: ease-in;
+   animation-iteration-count: infinite;
+   animation-duration: 1s;
+   margin-bottom: 1em;
+}
+
+@keyframes arrow-anime {
+    0% {
+        transform: translate(0, 40%);
+    }
+    50% {
+        transform: translate(0, 70%);
+    }
+    100% {
+        transform: translate(0, 40%);
+    }
+
+}
+@keyframes blob-anime {
+  from {
+        rotate: 0deg;
+    }
+    /* 50% {
+        scale: 1 1.5;
+    } */
+    to {
+        rotate: 360deg;
+    }
+
+}

@@ -1,0 +1,94 @@
+#works {
+    
+}
+
+.work-header {
+    margin-top: 10em;
+    border-top: 1px solid #eeeeee3d;
+    padding: 1em 2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.w-header-text {
+    font-size: 3.5rem;
+    word-spacing: -38px;
+}
+
+.w-box {
+    width: 100%;
+    height: auto;
+    /* margin-top: 4em; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #eeeeee3d ;
+    /* border-bottom: 1px solid #eeeeee3d ; */
+    z-index: 9999;
+    cursor: pointer;
+}
+
+ .expand {
+    width: 200px;
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 300ms opacity ease-in;
+    position: absolute;
+}
+
+.w-box:hover >  .expand{
+    opacity: 1;
+}
+.p-sec {
+    width: 100%;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ padding: 1em;
+}
+.p-sec button {
+    background: transparent;
+    z-index: 9999;
+    border: 1px solid #eeeeee3d;
+    position: relative;
+    padding: .5rem;
+    border-radius: .5em;
+}
+.p-sec button  .bg{
+    width: 100%;
+    height: 0%;
+    background-color: orangered;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 300ms height;
+}
+.p-sec button:hover > .bg {
+    height: 100%;
+}
+.p-d {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.p-d h1 {
+    font-size: 4em;
+}
+.p-f-featured-images {
+    width: 100%;
+    display: none;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 3em;
+    overflow-x: scroll;
+    padding: 5em 1em;
+}
+.p-f-featured-images img {
+    width: 500px;
+}
