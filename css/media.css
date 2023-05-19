@@ -22,4 +22,14 @@
    #works {
     overflow: hidden;
    }
+   .w-header-text {
+    font-size: 11vw;
+   }
+   .work-header p {
+    display: none;
+   }
+   .face {
+    display: none;
+   }
+
 }
