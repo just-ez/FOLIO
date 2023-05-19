@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px) {
+    nav {
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    nav div {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+       gap: 2em;
+   }
+   .hero-text h2 {
+    font-size: 9vw;
+    scale: 1.2 3;
+   }
+   .scroll-down {
+    display: none;
+   }
+   #works {
+    overflow: hidden;
+   }
+}
