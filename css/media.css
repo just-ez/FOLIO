@@ -1,4 +1,7 @@
 @media screen and (max-width: 600px) {
+    header {
+        height: 95vh;
+    }
     nav {
         align-items: flex-start;
         justify-content: space-between;
