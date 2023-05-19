@@ -13,9 +13,9 @@ body {
     color: #eee;
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
-    text-shadow:
+    /* text-shadow:
     0 0 3px #eee,
-    0 0 3px #eee;
+    0 0 3px #eee; */
     
 }
 /* body::before,
