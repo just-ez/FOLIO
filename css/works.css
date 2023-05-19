@@ -14,6 +14,7 @@
 .w-header-text {
     font-size: 3.5rem;
     word-spacing: -38px;
+    position: relative;
 }
 
 .w-box {
@@ -30,26 +31,31 @@
     cursor: pointer;
 }
 
+.works-container .w-box:nth-child(4) {
+    border-bottom: 1px solid#eeeeee3d;
+}
+
  .expand {
     width: 200px;
-    background-color: #333;
+    /* background-color: #333; */
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     opacity: 0;
     transition: 300ms opacity ease-in;
     position: absolute;
+    top: 3rem;
 }
 
-.w-box:hover >  .expand{
+/* .w-box:hover >  .expand{
     opacity: 1;
-}
+} */
 .p-sec {
     width: 100%;
   display: flex;
   align-items: center;
  justify-content: space-between;
- padding: 1em;
+ padding: .8em;
 }
 .p-sec button {
     background: transparent;
@@ -82,13 +88,94 @@
 }
 .p-f-featured-images {
     width: 100%;
-    display: none;
+    padding: 2em 1em;
+    overflow: hidden;
+    /* display: flex; */
+}
+.a-p {
+    width: 100%;
+    display: flex;
     align-items: center;
-    /* justify-content: center; */
+    gap: 4rem;
+}
+.p-img-c {
+    width: 100%;
+    display: flex;
+    align-items: center;
     gap: 3em;
-    overflow-x: scroll;
-    padding: 5em 1em;
+    animation: marque 50s infinite;
+}
+.p-img-c:hover {
+    animation-play-state: paused;
+}
+.p-img-c .img {
+    flex-basis: 40%;
+    flex-shrink: 0;
 }
 .p-f-featured-images img {
-    width: 500px;
+    width: 100%;
+}
+
+.f-c {
+    position: absolute;
+    right: 8rem;
+    top: 6rem;
+}
+
+.face {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: yellow;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    
+}
+
+.face::before {
+    content: '';
+    position: absolute; 
+    bottom: 15%;
+    width: 5rem;
+    height: 2rem;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: #ee222e;
+    top: 5.3rem;
+    transition: .5s;
+}
+.eyes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 20%;
+}
+.eye {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #eee;
+    position: relative;
+}
+.eye::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    transform: translate(-50%), -50%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+@keyframes marque {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
