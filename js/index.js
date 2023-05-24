@@ -30,17 +30,62 @@ function rotateEye  (){
 }
 
 
-// show image marque 
+gsap.registerPlugin(ScrollTrigger);
 
-// work boxes
-const w_box_1 = document.getElementById('w-box-1')
-const w_box_2 = document.getElementById('w-box-2')
-const w_box_3 = document.getElementById('w-box-3')
-const w_box_4 = document.getElementById('w-box-4')
+const timeline = gsap.timeline({
+   // duration: 1
+})
+timeline.from('line_right', {
+   duration: 1,
+   with: '100%',
+   ease: 'power4.In'
+})
+timeline.from('.nav-p', {
+    opacity: 0,
+    y: '-100%',
+    ease: 'power4.In'
+})
+timeline.from('.hero_txt_1', {
+   opacity: 0,
+   y: '100%',
+   ease: 'elastic',
+   duration: 1.1
+})
+timeline.from('.hero_txt_2', {
+   opacity: 0,
+   y: '100%',
+   ease: 'elastic',
+   duration: 1.1
+})
+timeline.from('.slide-up', {
+   opacity: 0,
+   y: '50%',
+   duration: 2,
+   ease: 'power4.In',
+})
 
-// work image containers
-const pf_1 = document.getElementById('p-f-1')
-const pf_2 = document.getElementById('p-f-2')
-const pf_3 = document.getElementById('p-f-3')
-const pf_4 = document.getElementById('p-f-4')
+gsap.from('.about', {
+   opacity: 0,
+   x: '-100%',
+   ease: 'power4.In',
+   scrollTrigger: '.about',
+   stagger: .2
+})
 
+// horizontal scroll
+
+let sections = gsap.utils.toArray(".box");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#work",
+    pin: true,
+    start: "top top",
+    scrub: 1,
+   //  snap: 1 / (sections.length - 1),
+    // base vertical scrolling on how wide the container is so it feels more natural.
+    end: "+=3500",
+  }
+});
