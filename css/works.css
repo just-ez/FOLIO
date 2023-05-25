@@ -1,10 +1,12 @@
 #works {
+    width: 980%;
     height: 100vh;
-    padding-left:  15em;
+    padding-left: 40em;
     display: flex;
+    align-items: center;
     overscroll-behavior: none;
     position: sticky;
-    top: 3em;
+    top: 2em;
 }
 .line_right {
     width: 0%;
@@ -21,17 +23,27 @@
     display: grid;
     place-items: center;
 }
-.box p {
+.box img {
+    position: absolute;
+    transform: translate(0%, 15%) scale(0.5) ;
+    transition: transform 250ms, opacity 250ms;
+    opacity: 0;
+    pointer-events: none;
+    width: min(50vw, 500px);
+}
+.box a:hover > .img-1 {
+    opacity: 1;
+    transform: translate(0%, 15%) scale(1) ;
+}
+.box a {
     font-size: 2.5rem;
     transform: rotate(90deg);
-    /* position: absolute; */
     white-space: nowrap;
-    /* bottom: 50%;
-    right: -50%; */
+    color: #eee;
 }
 
 .box-1 {
-    /* margin-left: 30rem; */
+    /* margin-left: 59rem; */
 }
 .box-1::before {
     content: '01';
@@ -55,8 +67,50 @@
     top: 0;
 }
 
+.box-3::before {
+    content: '03';
+    color: #aaa;
+    font-size: 2em;
+    opacity: .5;
+    font-weight: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
- 
+.box-4::before {
+    content: '04';
+    color: #aaa;
+    font-size: 2em;
+    opacity: .5;
+    font-weight: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.box-5::before {
+    content: '05';
+    color: #aaa;
+    font-size: 2em;
+    opacity: .5;
+    font-weight: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.box-6::before {
+    content: '06';
+    color: #aaa;
+    font-size: 2em;
+    opacity: .5;
+    font-weight: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 
 @keyframes marque {
     0% {

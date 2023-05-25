@@ -66,10 +66,11 @@ timeline.from('.slide-up', {
 
 gsap.from('.about', {
    opacity: 0,
+   duration: .1,
    x: '-100%',
    ease: 'power4.In',
    scrollTrigger: '.about',
-   stagger: .2
+   stagger: .1
 })
 
 // horizontal scroll
@@ -86,6 +87,6 @@ gsap.to(sections, {
     scrub: 1,
    //  snap: 1 / (sections.length - 1),
     // base vertical scrolling on how wide the container is so it feels more natural.
-    end: "+=3500",
+    end: "+=4500",
   }
 });

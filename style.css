@@ -18,27 +18,10 @@ body {
     0 0 3px #eee,
     0 0 3px #eee; */
 }
-/* body::before,
-body::after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: '';
-    width: 100%;
-    height: 120svi;
-    z-index: 999;
-    opacity: 80%;
-}
-
-body::before {
-    background: #eee;
-    filter: url(#grainy);
-} */
 ::-webkit-scrollbar {
     display: none;
 }
 .blob {
-    /* background-color: #eee; */
     width: 100px;
     height: 100px;
     position: absolute;
@@ -46,10 +29,10 @@ body::before {
     right: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    background: linear-gradient(to right, orangered, rgb(255, 145, 0));
+    background: linear-gradient(to right, purple, rgb(255, 145, 0));
     animation: blob-anime 20s infinite;
-    filter: blur(50px);
-    display: none;
+    filter: blur(100px);
+    /* display: none; */
 }
 svg {
     display: none;
@@ -121,13 +104,15 @@ nav div button:hover > .bg {
 .about-c {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
-    padding: 30em 3em;
+    flex-direction: column;
+    gap: 15em;
+    padding: 20em 3em;
 }
 
 .about-c p {
-    font-size: 4rem;
+    font-size: 2rem;
     word-spacing: -.1em;
 }
 
@@ -150,11 +135,14 @@ nav div button:hover > .bg {
 }
 .contact {
     width: 100%;
-    min-height: 40vh;
+    min-height: 30vh;
     display: grid;
     place-items: center;
     gap: 10rem;
-    margin-top: 10em;
+    margin-top: 50em;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 100%;
 }
 .contact h2 {
     font-size: 2rem;
