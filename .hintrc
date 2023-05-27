@@ -15,7 +15,9 @@
       {
         "ignore": [
           "width: fit-content",
-          "backdrop-filter"
+          "backdrop-filter",
+          "scroll-behavior",
+          "translate"
         ]
       }
     ],

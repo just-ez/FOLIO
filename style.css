@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 a {
     color: #aaa;
     text-decoration: none;
 }
+
 body {
     background: #111;
     color: #aaa;
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
-    /* text-shadow:
-    0 0 3px #eee,
-    0 0 3px #eee; */
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
+
 .blob {
     width: 100px;
     height: 100px;
@@ -34,32 +36,36 @@ body {
     filter: blur(100px);
     /* display: none; */
 }
-svg {
-    display: none;
-}
+
 header {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 1em 3em;
-    gap: 3rem;
+    padding: 2em 3em;
+    gap: 2rem;
     position: relative;
 }
+
 nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
+
 nav div {
-     display: flex;
+    display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
     justify-content: flex-end;
     line-height: 1.1em;
     padding: .5em;
     gap: 10em;
+    overflow: hidden;
 }
 
 nav div button {
@@ -72,10 +78,11 @@ nav div button {
     cursor: pointer;
     color: #aaa;
 }
-nav div button  .bg{
+
+nav div button .bg {
     width: 30%;
     height: 100%;
-    background-color: orangered;
+    background-color: rgb(182, 54, 8);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -83,100 +90,102 @@ nav div button  .bg{
     transition: 300ms width;
     border-radius: 1em;
 }
-nav div button:hover > .bg {
+
+nav div button:hover>.bg {
     width: 100%;
 }
 
-
-.hero-text {
-    overflow: hidden;
+.hero_section .hero_container_2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+    position: relative;
 }
-.hero-text h2{
-    font-size: 15rem;
-    font-weight: bolder;
+.side_line {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #eeeeee3d;
+}
+.hero_container_2 ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+}
+
+.hero_section .hero_container_1 {
+    font-size: 15vw;
+    font-weight: 900;
     line-height: 1em;
-    margin: 3rem 0;
-    letter-spacing: -.1rem;
+    margin: 1.3rem 0;
     font-family: 'Bebas Neue', sans-serif;
     color: #777;
+}
+
+.hero_section div p {
+    scale: 1 2;
+    color: rgb(182, 54, 8);
+    letter-spacing: .05EM;
+    text-align: center;
 }
 
 .about-c {
     width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
     flex-direction: column;
-    gap: 15em;
+    gap: 5em;
     padding: 20em 3em;
+    background-color: #111;
+    z-index: 999;
+    position: relative;
 }
 
 .about-c p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     word-spacing: -.1em;
+    margin-left: 5em;
 }
 
 .scroll-down {
-    position: absolute;
-    bottom: 1em;
-    right: 45%;
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 
 .arrow-container span {
-   animation-name: arrow-anime;
-   animation-timing-function: ease-in;
-   animation-iteration-count: infinite;
-   animation-duration: 1s;
-   margin-bottom: 1em;
+    animation-name: arrow-anime;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    margin-bottom: 1em;
 }
-.contact {
-    width: 100%;
-    min-height: 30vh;
-    display: grid;
-    place-items: center;
-    gap: 10rem;
-    margin-top: 50em;
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 100%;
-}
-.contact h2 {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #eee;
-    /* line-height: 1rem; */
-}
-.contact footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-}
-.f-links {
-    display: flex;
-    gap: 1em;
-}
+
+
 @keyframes arrow-anime {
     0% {
         transform: translate(0, 40%);
     }
+
     50% {
         transform: translate(0, 70%);
     }
+
     100% {
         transform: translate(0, 40%);
     }
 
 }
+
 @keyframes blob-anime {
-  from {
+    from {
         rotate: 0deg;
     }
+
     /* 50% {
         scale: 1 1.5;
     } */
@@ -185,4 +194,3 @@ nav div button:hover > .bg {
     }
 
 }
-

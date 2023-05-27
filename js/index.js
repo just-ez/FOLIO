@@ -35,11 +35,7 @@ gsap.registerPlugin(ScrollTrigger);
 const timeline = gsap.timeline({
    // duration: 1
 })
-timeline.from('line_right', {
-   duration: 1,
-   with: '100%',
-   ease: 'power4.In'
-})
+
 timeline.from('.nav-p', {
     opacity: 0,
     y: '-100%',
@@ -48,14 +44,20 @@ timeline.from('.nav-p', {
 timeline.from('.hero_txt_1', {
    opacity: 0,
    y: '100%',
-   ease: 'elastic',
+   ease: 'bounce',
    duration: 1.1
 })
 timeline.from('.hero_txt_2', {
    opacity: 0,
    y: '100%',
-   ease: 'elastic',
+   ease: 'power4.In',
    duration: 1.1
+})
+timeline.from('.side_line', {
+   duration: 1,
+   width: '0%',
+   ease: 'power4.In',
+   stagger: .1
 })
 timeline.from('.slide-up', {
    opacity: 0,
@@ -90,3 +92,12 @@ gsap.to(sections, {
     end: "+=4500",
   }
 });
+
+// increase line height
+gsap.from('.line_right', {
+   duration: 1,
+   height: '0%',
+   ease: 'power4.In',
+   scrollTrigger: '.line_right',
+   stagger: .1
+})
