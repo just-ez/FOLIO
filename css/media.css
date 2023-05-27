@@ -2,12 +2,14 @@
     header {
         height: 100vh;
         justify-content: space-between;
+        padding: 2em 1em;
 
     }
     nav {
         align-items: flex-start;
         justify-content: space-between;
         position: static;
+        padding: 0;
     }
     nav div {
         flex-direction: column;

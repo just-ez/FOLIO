@@ -34,7 +34,7 @@ body {
     background: linear-gradient(to right, purple, rgb(255, 145, 0));
     animation: blob-anime 20s infinite;
     filter: blur(100px);
-    /* display: none; */
+    display: none;
 }
 
 header {
