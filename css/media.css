@@ -15,7 +15,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-       gap: 2em;
+       gap: 1em;
    }
    .hero_section .hero_container_2 {
     align-items: flex-end;
