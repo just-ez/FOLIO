@@ -29,6 +29,9 @@
    .scroll-down {
     /* display: none; */
    }
+   .about-c {
+    padding: 10em 2em;
+   }
    .about-c p {
     margin: 0;
    }
