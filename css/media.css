@@ -1,10 +1,13 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1207px) {
     header {
-        height: 95vh;
+        height: 100vh;
+        justify-content: space-between;
+
     }
     nav {
         align-items: flex-start;
         justify-content: space-between;
+        position: static;
     }
     nav div {
         flex-direction: column;
@@ -12,12 +15,22 @@
         justify-content: center;
        gap: 2em;
    }
+   .hero_section .hero_container_2 {
+    align-items: flex-end;
+   }
+   .hero_section .hero_container_2 ul {
+    flex-direction: column;
+    align-items: flex-start;
+   }
    .hero-text h2 {
     font-size: 9vw;
     scale: 1.2 3;
    }
    .scroll-down {
-    display: none;
+    /* display: none; */
+   }
+   .about-c p {
+    margin: 0;
    }
    #works {
     overflow: hidden;
