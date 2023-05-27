@@ -41,14 +41,14 @@ timeline.from('.nav-p', {
     y: '-100%',
     ease: 'power4.In'
 })
-// timeline.from('.hero_txt_1', {
-//    opacity: 0,
-//    y: '100%',
-//    ease: 'bounce',
-//    duration: 1.1
-// })
+timeline.from('.hero_txt_1', {
+   opacity: 0,
+   y: '100%',
+   ease: 'power1.Out',
+   duration: .2
+})
 timeline.from('.side_line', {
-   duration: 1,
+   duration: .3,
    width: '0%',
    ease: 'power4.In',
    stagger: .1
@@ -56,7 +56,7 @@ timeline.from('.side_line', {
 timeline.from('.slide-up', {
    opacity: 0,
    y: '50%',
-   duration: 2,
+   duration: .15,
    ease: 'power4.In',
 })
 
