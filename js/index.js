@@ -1,33 +1,21 @@
 const blob = document.querySelector('.blob')
-const expand = document.querySelector('.expand');
-const w_box = document.querySelectorAll('w-box')
-const imgC = document.querySelectorAll('.p-f-featured-images')
 // animate blob to follow cursor
 document.body.onpointermove = e => {
+   const interactable = e.target.closest('.interactable'),
+         interacting = interactable !== null
    const {clientX, clientY} = e
+
    blob.animate({
     left: `${clientX}px`,
-    top: `${clientY}px`
+    top: `${clientY}px`,
+    scale: `${interacting ? 8:1}`
    }, {duration: 3000, fill: "forwards"}) 
   
+   
  
 }
 
-// emoji animation
 
-document.querySelector('body').addEventListener('mousemove', rotateEye)
-
-function rotateEye  (){
-   let eyes = document.querySelectorAll('.eye')
-   eyes.forEach(eye => {
-      let x = eye.getBoundingClientRect().left + eye.clientWidth / 2
-      let y = eye.getBoundingClientRect().top + eye.clientHeight / 2
-      let radian = Math.atan2(event.pageX - x, event.pageY - y)
-      let rotate = radian  * (180 / Math.PI) * -1 + 270
-      console.log(rotate);
-      eye.style.transform = `rotate(${rotate}deg)`
-   })
-}
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,7 +36,7 @@ timeline.from('.hero_txt_1', {
    duration: .2
 })
 timeline.from('.side_line', {
-   duration: .3,
+   duration: .6,
    width: '0%',
    ease: 'power4.In',
    stagger: .1

@@ -12,8 +12,9 @@ a {
     text-decoration: none;
 }
 
+
 body {
-    background: #111;
+    background: #131419;
     color: #aaa;
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
@@ -24,19 +25,21 @@ body {
 }
 
 .blob {
-    width: 100px;
-    height: 100px;
-    position: absolute;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    opacity: 0;
     left: 50%;
     right: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    background: linear-gradient(to right, purple, rgb(255, 145, 0));
+    background: rgb(182, 54, 8);
     animation: blob-anime 20s infinite;
-    filter: blur(100px);
-    display: none;
+    /* z-index: 9999999; */
 }
-
+body:hover > .blob {
+    opacity: 1;
+}
 header {
     width: 100%;
     min-height: 100vh;
@@ -45,6 +48,7 @@ header {
     padding: 2em 3em;
     gap: 2rem;
     position: relative;
+    overflow: visible;
 }
 
 nav {
@@ -52,9 +56,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 3;
 }
 
 nav div {
@@ -70,7 +71,6 @@ nav div {
 
 nav div button {
     background: transparent;
-    z-index: 9999;
     border: 1px solid #eeeeee3d;
     position: relative;
     padding: .5rem;
@@ -103,6 +103,7 @@ nav div button:hover>.bg {
     padding: 1em 0;
     position: relative;
 }
+
 .side_line {
     width: 100%;
     position: absolute;
@@ -110,6 +111,7 @@ nav div button:hover>.bg {
     left: 0;
     border-top: 1px solid #eeeeee3d;
 }
+
 .hero_container_2 ul {
     display: flex;
     align-items: center;
@@ -118,12 +120,12 @@ nav div button:hover>.bg {
 }
 
 .hero_section .hero_container_1 {
-    font-size: 15vw;
+    font-size: 16vw;
     font-weight: 900;
-    line-height: 1em;
+    line-height: .8em;
     margin: 1.3rem 0;
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: -0.01em;  
+    letter-spacing: -0.01em;
     padding: 0.6em 0
 }
 
@@ -132,6 +134,7 @@ nav div button:hover>.bg {
     color: rgb(182, 54, 8);
     letter-spacing: .05EM;
     text-align: center;
+    mix-blend-mode: difference;
 }
 
 .about-c {
@@ -140,8 +143,8 @@ nav div button:hover>.bg {
     flex-direction: column;
     gap: 5em;
     padding: 20em 3em;
-    background-color: #111;
-    z-index: 999;
+    background: rgba(182, 54, 8, 0.644);
+    z-index: -1;
     position: relative;
 }
 
@@ -149,6 +152,8 @@ nav div button:hover>.bg {
     font-size: 1.4rem;
     word-spacing: -.1em;
     margin-left: 5em;
+    color: #aaa;
+    z-index: 9999999999;
 }
 
 .scroll-down {

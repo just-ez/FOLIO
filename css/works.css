@@ -57,7 +57,7 @@ min-height: 40vh;
     display: grid;
     place-items: center;
     gap: 10rem;
-    background-color: #111;
+    background: #131419;
     margin-top: 120em;
     z-index: 999;
     position: relative;
