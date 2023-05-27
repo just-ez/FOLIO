@@ -41,18 +41,12 @@ timeline.from('.nav-p', {
     y: '-100%',
     ease: 'power4.In'
 })
-timeline.from('.hero_txt_1', {
-   opacity: 0,
-   y: '100%',
-   ease: 'bounce',
-   duration: 1.1
-})
-timeline.from('.hero_txt_2', {
-   opacity: 0,
-   y: '100%',
-   ease: 'power4.In',
-   duration: 1.1
-})
+// timeline.from('.hero_txt_1', {
+//    opacity: 0,
+//    y: '100%',
+//    ease: 'bounce',
+//    duration: 1.1
+// })
 timeline.from('.side_line', {
    duration: 1,
    width: '0%',
