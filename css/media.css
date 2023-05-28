@@ -34,10 +34,12 @@
   
 
 .hero_section  .hero_container_1 p {
-    font-size: 20vw;
+    /* font-size: 16vw; */
     scale: 1.6 3;
     line-height: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1em;    
+    margin-left: 1.3em;
+    text-align: left;
    }
    .scroll-down {
     /* display: none; */

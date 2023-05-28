@@ -35,7 +35,6 @@ body {
     border-radius: 50%;
     background: rgb(182, 54, 8);
     animation: blob-anime 20s infinite;
-    /* z-index: 9999999; */
 }
 body:hover > .blob {
     opacity: 1;
@@ -71,28 +70,31 @@ nav div {
 
 nav div button {
     background: transparent;
-    border: 1px solid #eeeeee3d;
+    border: 2px solid #eeeeee3d;
     position: relative;
     padding: .5rem;
     border-radius: 1em;
     cursor: pointer;
     color: #aaa;
+
 }
 
 nav div button .bg {
-    width: 30%;
+    width: 0%;
     height: 100%;
     background-color: rgb(182, 54, 8);
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: -1;
-    transition: 300ms width;
+    transition: width 300ms, opacity 300ms;
     border-radius: 1em;
+    opacity: 0;
 }
 
 nav div button:hover>.bg {
     width: 100%;
+    opacity: 1;
 }
 
 .hero_section .hero_container_2 {
