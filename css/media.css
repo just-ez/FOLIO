@@ -94,6 +94,7 @@
     align-items: center;
     gap: 5rem;
     margin-top: 10em;
+    background: rgba(182, 54, 8, 0.644);
 }
 .contact h2 {
     font-size: 1rem;
