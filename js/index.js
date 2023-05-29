@@ -17,7 +17,6 @@ document.body.onpointermove = e => {
 
 
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const timeline = gsap.timeline({
@@ -58,6 +57,20 @@ gsap.from('.about', {
    stagger: .1
 })
 
+
+// increase line height
+gsap.from('.line_right', {
+   duration: 1,
+   width: '0%',
+   ease: 'power4.In',
+   scrollTrigger: '.line_right',
+   stagger: .5
+})
+
+const width = screen.width
+console.log(width);
+
+if (width > 600) {
 // horizontal scroll
 
 let sections = gsap.utils.toArray(".box");
@@ -84,3 +97,5 @@ gsap.from('.line_right', {
    scrollTrigger: '.line_right',
    stagger: .1
 })
+
+}

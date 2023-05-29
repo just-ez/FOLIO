@@ -172,6 +172,7 @@ nav div button:hover>.bg {
     animation-iteration-count: infinite;
     animation-duration: 1s;
     margin-bottom: 1em;
+    font-size: .8em;
 }
 
 

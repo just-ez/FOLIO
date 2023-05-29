@@ -1,6 +1,6 @@
 #works {
     width: 980%;
-    height: 100vh;
+    min-height: 100vh;
     padding-left: 40em;
     display: flex;
     align-items: center;
