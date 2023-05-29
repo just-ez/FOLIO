@@ -54,25 +54,45 @@ min-height: 40vh;
 .contact {
     width: 100%;
     min-height: 100vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 10rem;
     background: #131419;
     margin-top: 120em;
     z-index: 999;
     position: relative;
 }
-.skills {
-    font-size: 3em;
-    margin-left: 10em;
-}
 .contact h2 {
     font-size: 2rem;
     font-weight: 900;
-    color: #eee;
-    /* line-height: 1rem; */
+}
+.marque_container{
+    width: 95%;
+    border-top: 1px solid#eeeeee3d;
+    border-bottom: 1px solid#eeeeee3d;
+    padding: 2em;
+    
+}
+.marque {
+    animation: marque 20s infinite ease-in ;
+    display: flex;
+    align-items: center;
 }
 
+.marque span {
+    font-size: 10vw;
+    white-space: nowrap;
+    transform: translate(-50%);
+    font-weight: 900;
+    font-family: 'Bebas Neue', sans-serif;
+    /* scale: 2 1; */
+    /* letter-spacing: -.021em; */
+}
+.marque:hover {
+    animation-play-state: paused;
+}
 .contact footer {
     width: 100%;
     display: flex;
@@ -86,6 +106,12 @@ min-height: 40vh;
     gap: 1em;
 }
 
+.f-links span {
+    border: 3px solid #eeeeee3d;
+    text-align: center;
+    padding: .5em;
+    border-radius: 1em;
+}
 
 @keyframes marque {
     0% {
