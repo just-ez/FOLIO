@@ -26,6 +26,7 @@ const timeline = gsap.timeline({
 
 timeline.from('.nav-p', {
     opacity: 0,
+    duration: .5,
     y: '-100%',
     ease: 'power4.In'
 })

@@ -18,12 +18,12 @@
        gap: 1em;
        padding: 0;
    }
-   .arrow-container span {
-    font-size: 1em;
+   .scroll-down a {
+    font-size: .6em;
    }
    .hero_section .hero_container_2 {
     align-items: center;
-    justify-content: center;
+    justify-content: right;
    }
    .hero_section .hero_container_2 ul {
     flex-direction: column;

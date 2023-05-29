@@ -137,6 +137,7 @@ nav div button:hover>.bg {
     letter-spacing: .05EM;
     text-align: center;
     mix-blend-mode: difference;
+    /* pointer-events: none; */
 }
 
 .about-c {
