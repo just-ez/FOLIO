@@ -152,11 +152,12 @@ nav div button:hover>.bg {
 }
 
 .about-c p {
-    font-size: 1.4rem;
+    font-size: 2rem;
     word-spacing: -.1em;
     margin-left: 5em;
     color: #aaa;
     z-index: 9999999999;
+    width: 50%;
 }
 
 .scroll-down {
