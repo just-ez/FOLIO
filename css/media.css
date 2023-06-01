@@ -1,4 +1,7 @@
 @media screen and (max-width: 1207px) {
+    .blob {
+        display: none;
+    }
     header {
         height: 100vh;
         justify-content: space-between;
