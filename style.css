@@ -36,9 +36,9 @@ body {
     background: rgb(182, 54, 8);
     animation: blob-anime 20s infinite;
 }
-body:hover > .blob {
+/* body:hover > .blob {
     opacity: 1;
-}
+} */
 header {
     width: 100%;
     min-height: 100vh;

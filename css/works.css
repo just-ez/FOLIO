@@ -71,8 +71,8 @@ min-height: 40vh;
 }
 .marque_container{
     width: 95%;
-    border-top: 1px solid#eeeeee3d;
-    border-bottom: 1px solid#eeeeee3d;
+    border-top: 2px solid#eeeeee3d;
+    border-bottom: 2px solid#eeeeee3d;
     padding: 2em;
     margin: 4em;
     

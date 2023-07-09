@@ -1,19 +1,19 @@
-const blob = document.querySelector('.blob')
-// animate blob to follow cursor
-document.body.onpointermove = e => {
-   const interactable = e.target.closest('.interactable'),
-         interacting = interactable !== null
-   const {clientX, clientY} = e
+// const blob = document.querySelector('.blob')
+// // animate blob to follow cursor
+// document.body.onpointermove = e => {
+//    const interactable = e.target.closest('.interactable'),
+//          interacting = interactable !== null
+//    const {clientX, clientY} = e
 
-   blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY}px`,
-    scale: `${interacting ? 8:1}`
-   }, {duration: 3000, fill: "forwards"}) 
+//    blob.animate({
+//     left: `${clientX}px`,
+//     top: `${clientY}px`,
+//     scale: `${interacting ? 8:1}`
+//    }, {duration: 3000, fill: "forwards"}) 
   
    
  
-}
+// }
 
 
 
