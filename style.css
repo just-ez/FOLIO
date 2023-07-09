@@ -8,14 +8,14 @@
 }
 
 a {
-    color: #aaa;
+    color: #b4b4b4;
     text-decoration: none;
 }
 
 
 body {
     background: #131419;
-    color: #aaa;
+    color: #b4b4b4;
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
 }
@@ -75,7 +75,7 @@ nav div button {
     padding: .5rem;
     border-radius: 1em;
     cursor: pointer;
-    color: #aaa;
+    color: #b4b4b4;
 
 }
 
@@ -156,7 +156,7 @@ nav div button:hover>.bg {
     font-size: 2rem;
     word-spacing: -.1em;
     margin-left: 5em;
-    color: #aaa;
+    color: #b4b4b4;
     z-index: 9999999999;
     width: 50%;
 }
