@@ -48,14 +48,14 @@ timeline.from('.slide-up', {
    ease: 'power4.In',
 })
 
-// gsap.from('.about', {
-//    opacity: 0,
-//    duration: .1,
-//    x: '-100%',
-//    ease: 'power4.In',
-//    scrollTrigger: '.about',
-//    stagger: .1
-// })
+gsap.from('.about', {
+   opacity: 0,
+   duration: .1,
+   x: '-100%',
+   ease: 'power4.In',
+   scrollTrigger: '.about',
+   stagger: .1
+})
 
 
 // increase line height
