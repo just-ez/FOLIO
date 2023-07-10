@@ -8,7 +8,7 @@
     gap: 1em;
     overscroll-behavior: none;
     position: sticky;
-    top: 1em;
+    top: .2em;
 }
 .line_right {
     width: 1px;
@@ -23,7 +23,7 @@
 
 #works > a {
     width: 20vw;
-    height: 90%;
+    min-height: 80vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -47,8 +47,9 @@ min-height: 40vh;
 }
 .w-header {
     font-weight: 900;
-    font-size: 4rem;
-    rotate: 90deg;
+    font-size: 2rem;
+    text-align: left;
+    /* rotate: 90deg; */
     color: #eee;
 }
 .contact {
