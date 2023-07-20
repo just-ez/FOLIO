@@ -4,7 +4,6 @@
     padding-left: 40em;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 1em;
     overscroll-behavior: none;
     position: sticky;
@@ -13,7 +12,7 @@
 .line_right {
     width: 1px;
     height: 100%;
-    border: .5px solid #eeeeee3d;
+    border: 1.2px solid #aaa;
     display: block;
     position: absolute;
     bottom: 0;
@@ -88,12 +87,12 @@ min-height: 40vh;
     font-size: 10vw;
     white-space: nowrap;
     transform: translate(-50%);
-    font-weight: 900;
+    font-weight: 700;
     font-family: 'Bebas Neue', sans-serif;
-    /* scale: 2 1; */
-    /* letter-spacing: -.021em; */
+    transition: color 300ms;
 }
-.marque:hover {
+.marque:hover > span {
+    color: #aaa;
     animation-play-state: paused;
 }
 .contact footer {
@@ -101,7 +100,7 @@ min-height: 40vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 3em 1em;
 }
 
 .f-links {
@@ -110,12 +109,24 @@ min-height: 40vh;
 }
 
 .f-links span {
-    border: 3px solid #eeeeee3d;
+    /* border: 3px solid #eeeeee3d; */
     text-align: center;
     padding: .5em;
     border-radius: 1em;
+    position: relative;
 }
-
+.f-links span::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 1%;
+    height: 1.2px;
+    background-color: #eeeeee3d;
+    /* transition: width 300ms; */
+}
+.f-links span:hover > .f-links span::before {
+    width: 90%;
+}
 @keyframes marque {
     0% {
         transform: translateX(0);
