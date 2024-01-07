@@ -20,21 +20,21 @@ gsap.registerPlugin(ScrollTrigger);
 const timeline = gsap.timeline({
   // duration: 1
 });
-timeline.to(".loading_bar", {
+timeline.to(".container", {
   opacity: 0,
-  duration: 5,
+  duration: 7,
   ease: "power4.In",
 });
-timeline.to(".stagger", {
-  opacity: 0,
-  duration: 0.7,
-  stagger: "",
-  width: "0",
-  ease: "power4.In",
-});
+// timeline.to(".stagger", {
+//   opacity: 0,
+//   duration: 0.7,
+//   stagger: "",
+//   width: "0",
+//   ease: "power4.In",
+// });
 timeline.to(".loader", {
   height: "0vh",
-  duration: 0.7,
+  duration: .2,
   stagger: "",
   width: "0",
   ease: "power4.In",

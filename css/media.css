@@ -54,7 +54,6 @@
    }
    .about-c {
     padding: 10em 2em;
-    background: #131419;
    }
    .about-c p {
     width: auto;
@@ -86,7 +85,9 @@
     bottom: 1em;
     border: 1px solid #eeeeee3d;
     border-radius: 1em;
-    padding: .5em;
+    padding: 0.5em;
+    width: 90%;
+    text-align: center;
 }
 #works > a > .img {
     min-height: auto;

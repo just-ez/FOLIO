@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/works.css" />
     <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
@@ -36,16 +37,37 @@
   <body>
     <div class="blob"></div>
     <div class="loader">
-      <div class="loading_bar">
-        <span>↓</span>
-        <span style="--delay: 0.1s">↓</span>
-        <span style="--delay: 0.3s">↓</span>
-        <span style="--delay: 0.4s">↓</span>
-        <span style="--delay: 0.5s">↓</span>
-        <p>PLEASE WAIT...</p>
+      <input class="sr-only" type="checkbox" id="flip">
+    <label for="flip"></label>
+    <h1 style="opacity: 0;">tap.</h1>
+    <div class="container">
+      <div class="scene">
+        <span class="loading-label">Loading...</span>
+        <!-- Note:: You could write a quick JavaScript generator to do this -->
+        <!-- Need a notion of the number of segments in the bar plus the layout for the grid -->
+        <div class="bar" style="--columns: 20% 0 10% 0 10% 0 10% 0 20% 0 10% 0 20%; --total-length: 400;">
+          <!-- Kind of a weird way to do it but... -->
+          <!-- The --length is the percentage length of the container -->
+          <!-- The --depth is a depth off the center line as a percentage of the container -->
+          <!-- The aligned should add to 100 as we're doing grid -->
+          <!-- The non-aligned dictate the depth being used -->
+          <!-- Needs to be the length of the depth currently plus the destination depth -->
+          <div style="--name:  segment-1; --delay:   0; --length: 20; --depth:   0;" class="bar__segment bar__segment--aligned"></div>
+          <div style="--name:  segment-2; --delay:  20; --length: 30; --depth:   0;" class="bar__segment bar__segment--front"></div>
+          <div style="--name:  segment-3; --delay:  50; --length: 10; --depth:  30;" class="bar__segment bar__segment--aligned"></div>
+          <div style="--name:  segment-4; --delay:  60; --length: 50; --depth:  30;" class="bar__segment bar__segment--back"></div>
+          <div style="--name:  segment-5; --delay: 110; --length: 10; --depth: -20;" class="bar__segment bar__segment--aligned"></div>
+          <div style="--name:  segment-6; --delay: 120; --length: 60; --depth: -20;" class="bar__segment bar__segment--front"></div>
+          <div style="--name:  segment-7; --delay: 180; --length: 10; --depth:  40;" class="bar__segment bar__segment--aligned"></div>
+          <div style="--name:  segment-8; --delay: 190; --length: 70; --depth:  40;" class="bar__segment bar__segment--back"></div>
+          <div style="--name:  segment-9; --delay: 260; --length: 20; --depth: -30;" class="bar__segment bar__segment--aligned"></div>
+          <div style="--name: segment-10; --delay: 280; --length: 50; --depth: -30;" class="bar__segment bar__segment--front"></div>
+          <div style="--name: segment-11; --delay: 330; --length: 30; --depth:  20;" class="bar__segment bar__segment--aligned"></div>
+          <div style="--name: segment-12; --delay: 360; --length: 20; --depth:  20;" class="bar__segment bar__segment--back"></div>
+          <div style="--name: segment-13; --delay: 380; --length: 20; --depth:   0;" class="bar__segment bar__segment--aligned"></div>
+        </div>
       </div>
-      <div class="stagger"></div>
-      <div class="stagger"></div>
+    </div>
     </div>
     <header id="header">
       <nav>
@@ -124,48 +146,22 @@
         <span style="color: rgba(158, 43, 2, 0.749)">
           (about) <br /><br />
         </span>
-        <span>HEY</span> <span>I'M </span>
-        <span>BERNARD</span> <span>EZRA.</span>
-        <span>I'M</span> <span>A</span>
-        <span>CREATIVE</span> <span>SOFTWARE</span>
-        <span>DEVELOPER</span>
-        <span>&</span> <span>DIGITAL</span>
-        <span>DESIGNER</span> <span>BASED</span>
-        <span>IN</span> <span>LAGOS,</span
-        ><span>NIGERIA</span> <span>FOCUSED </span
-        ><span>ON</span> <span>CREATING</span>
-        <span>INTERACTIVE</span>
-        <span>DIGITAL</span>
-        <span>EXPERIENCE</span> <span>FOR</span>
-        <span>THE</span>
-        <span>WEB.</span>
+        HEY I'M SOUKOU EZRA. <br> I'M A CREATIVE FULL-STACK SOFTWARE DEVELOPER 
+        BASED IN LAGOS,NIGERIA FOCUSED ON CREATING INTERACTIVE DIGITAL
+        EXPERIENCE FOR THE WEB.
       </p>
 
       <p class="slide-2 interactable">
-        <span>OVER</span> <span>THE</span>
-        <span>YEARS</span> <span>I</span>
-        <span>HAVE</span> <span>WORKED</span>
-        <span>WITH</span><span> SOME</span>
-        <span>STARTUPS</span>
-        <span>AS A</span> <span>FRONT-END</span>
-        <span>AND</span>
-        <span>BACKEND DEVELOPER.</span>
-        <span>I AM</span>
-        <span>CURRENTLY DEVELOPING</span>
-        <span>MY SKILL</span>
-        <span>AS A DIGITAL</span>
-        <span>DESIGNER.</span>
+        FOR OVER 2 YEAR'S NOW I HAVE BEEN KEEN ON PROVIDING VALUE, AND HELPING
+        CLIENTS ACCOMPLISH TECHNICAL GOALS, <br> <br> BY DEVELOPING USER FRIENDLY AND
+        FORWARD-THINKING APPS AND SOFTWARE. <br /> <br>
+        EXPERIENCE WITH PYTHON AND JAVASCRIPT (BOTH FRONT-END AND BACK-END),
+        WITH FRAMEWORKS LIKE REACTJS, NODEJS, AND FRAPPE.
       </p>
     </div>
 
-    <!-- <span
-      style="color: rgba(158, 43, 2, 0.749); font-size: 2em; margin-left: 6.5em"
-    >
-      (works) <br /><br />
-    </span> -->
+   
     <section id="works">
-      <!-- 
-    <span class="line_left"></span> -->
 
       <a
         href="http://thejustprojects.com"
@@ -214,13 +210,16 @@
         <span class="w-header"> ARTME </span>
         <span class="line_right"></span>
       </a>
-      <a href="https://pebbles-signature.com/home" target="_blank" rel="noopener noreferrer" class="box">
+      <a
+        href="https://pebbles-signature.com/home"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="box"
+      >
         <div class="img">
           <img src="./assets/pebbles (2).png" alt="" />
         </div>
-        <span
-          >Online Booking Platform (apartments, laundry, rides etc.)</span
-        >
+        <span>Online Booking Platform (apartments, laundry, rides etc.)</span>
         <span class="w-header"> PEBBLES SIGNATURES. </span>
         <span class="line_right"></span>
       </a>
@@ -284,14 +283,14 @@
               >GITHUB</a
             ></span
           >
-          <span
+          <!-- <span
             ><a
               href="https://www.instagram.com/ezthedevelop3r/"
               target="_blank"
               rel="noopener noreferrer"
               >INSTAGRAM</a
             ></span
-          >
+          > -->
         </div>
 
         <a href="#header" style="display: flex; align-items: center; gap: 1em">
