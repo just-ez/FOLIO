@@ -134,8 +134,16 @@
 }
 }
 
-@media screen and (min-width: 635px) {
+@media screen and (max-width: 635px) {
     #works > a::before {
         right: 0;
     }
+    .hero_section  .hero_container_1 p {
+    /* font-size: 16vw; */
+    scale: 1.6 3;
+    line-height: 1em;
+    margin-bottom: 1em;    
+    margin-left: 0;
+    text-align: center;
+   }
 }
