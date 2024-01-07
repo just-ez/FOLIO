@@ -3,7 +3,7 @@
 *:before {
   box-sizing: border-box;
   transform-style: preserve-3d;
-  touch-action: none;
+  /* touch-action: none; */
 }
 
 :root {
