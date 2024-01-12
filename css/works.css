@@ -35,11 +35,10 @@
 
 #works > a > .img {
 pointer-events: none;
-width: 100%;
 }
 .img img{
     width: 100%;
-    height: 100%;
+
     }
 
 .w-header {
@@ -104,27 +103,10 @@ background: #111;
 .f-links {
     display: flex;
     gap: 1em;
+    align-items: flex-start;
 }
 
-.f-links span {
-    /* border: 3px solid #eeeeee3d; */
-    text-align: center;
-    padding: .5em;
-    border-radius: 1em;
-    position: relative;
-}
-.f-links span::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 1%;
-    height: 1.2px;
-    background-color: #eeeeee3d;
-    /* transition: width 300ms; */
-}
-.f-links span:hover > .f-links span::before {
-    width: 90%;
-}
+
 @keyframes marque {
     0% {
         transform: translateX(0);

@@ -18,7 +18,7 @@ body {
     color: #aaa;
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
-    max-width: 1500px;
+    /* max-width: 1900px; */
     margin: 0 auto;
 }
 p {
@@ -137,18 +137,17 @@ nav div button:hover>.bg {
 }
 
 .hero_section .hero_container_1 {
-    font-size: 10vw;
+    font-size: 16vw;
     font-weight: 900;
     line-height: .8em;
     margin: 1rem 0;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: -0.01em;
-    padding: 1em 0;
+    padding: .65em 0;
     
 }
 .hero_section .hero_container_1 p {
     scale: 1 2;
-    /* color: rgb(182, 54, 8); */
     color: #8f8f8f;
     letter-spacing: .05EM;
     text-align: center;
