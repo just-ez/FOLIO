@@ -146,9 +146,6 @@
 }
 
 @media screen and (max-width: 635px) {
-  #works > a::before {
-    right: 0;
-  }
   .hero_section .hero_container_1 p {
     font-size: 10.5vw;
     scale: 1.6 2.5;

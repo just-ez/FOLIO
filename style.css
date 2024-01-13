@@ -160,20 +160,31 @@ nav div button:hover>.bg {
     flex-direction: column;
     gap: 5em;
     padding: 10em 3em;
-    /* background: rgba(182, 54, 8, 0.644); */
+    margin-left: 5em;
     z-index: -1;
     position: relative;
 }
 
 .about-c p {
     font-size: 1.5rem;
-    word-spacing: -.1em;
-    margin-left: 5em;
     color: #b4b4b4;
     z-index: 9999999999;
     width: 50%;
 }
-
+.about-c p {
+      scale: 0.8;
+      opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100px;
+    animation-range-end: contain;
+  }
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
 .scroll-down {
     display: flex;
     align-items: center;
