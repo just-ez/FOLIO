@@ -159,8 +159,8 @@ nav div button:hover>.bg {
     display: flex;
     flex-direction: column;
     gap: 5em;
-    padding: 10em 3em;
-    margin-left: 5em;
+    padding: 2em 0;
+    margin-left: 7em;
     z-index: -1;
     position: relative;
 }

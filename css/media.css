@@ -59,7 +59,8 @@
   .about-c p {
     width: fit-content;
     margin: 0em;
-    font-size: 1em;
+    font-size: 1.4em;
+    animation-range-start: 100px;
   }
 
   #works {
