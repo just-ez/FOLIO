@@ -14,7 +14,7 @@ a {
 
 
 body {
-    background: #111;
+    background: #1a1a1a;
     color: #aaa;
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
@@ -119,6 +119,7 @@ nav div button:hover>.bg {
     justify-content: space-between;
     padding: 1em 0;
     position: relative;
+    display: none;
 }
 
 .side_line {
@@ -159,7 +160,7 @@ nav div button:hover>.bg {
     display: flex;
     flex-direction: column;
     gap: 5em;
-    padding: 2em 0;
+    padding: 2em 0.5em;
     margin-left: 7em;
     z-index: -1;
     position: relative;

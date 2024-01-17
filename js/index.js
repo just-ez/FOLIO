@@ -1,3 +1,11 @@
+// $(document).scroll(function () {
+//   var scroll = $(window).scrollTop();
+//   if (scroll > 3500) {
+//     console.log("hi", scroll);
+//     $("body").addClass("scroll1");
+//   }
+// });
+
 const blob = document.querySelector(".blob");
 // animate blob to follow cursor
 document.body.onpointermove = (e) => {
@@ -34,7 +42,7 @@ timeline.to(".container", {
 // });
 timeline.to(".loader", {
   height: "0vh",
-  duration: .2,
+  duration: 0.2,
   stagger: "",
   width: "0",
   ease: "power4.In",
@@ -111,5 +119,4 @@ if (width > 600) {
     scrollTrigger: ".line_right",
     stagger: 0.1,
   });
-
 }
