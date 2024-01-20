@@ -120,3 +120,8 @@ if (width > 600) {
     stagger: 0.1,
   });
 }
+
+const time = document.querySelector(".time");
+setInterval(() => {
+  time.innerHTML = new Date().toLocaleTimeString();
+}, 1000);
