@@ -26,25 +26,23 @@ document.body.onpointermove = (e) => {
 gsap.registerPlugin(ScrollTrigger);
 
 const timeline = gsap.timeline({
-  // duration: 1
+  duration: 1
 });
-timeline.to(".container", {
-  opacity: 0,
-  duration: 7,
-  ease: "power4.In",
+
+timeline.to(".stagger", {
+  duration: 1,
+  height: "100%",
+  ease: "rough",
 });
-// timeline.to(".stagger", {
-//   opacity: 0,
-//   duration: 0.7,
-//   stagger: "",
-//   width: "0",
-//   ease: "power4.In",
-// });
+timeline.to(".stagger", {
+  duration: 1,
+  height: "0%",
+  top: 0,
+  ease: "rough",
+});
 timeline.to(".loader", {
-  height: "0vh",
   duration: 0.2,
-  stagger: "",
-  width: "0",
+  opacity: 0,
   ease: "power4.In",
 });
 timeline.from(".nav_p", {

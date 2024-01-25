@@ -38,37 +38,81 @@
   <body>
     <div class="blob"></div>
     <div class="loader">
-      <input class="sr-only" type="checkbox" id="flip">
-    <label for="flip"></label>
-    <h1 style="opacity: 0;">tap.</h1>
-    <div class="container">
-      <div class="scene">
-        <span class="loading_label">Loading...</span>
-        <!-- Note:: You could write a quick JavaScript generator to do this -->
-        <!-- Need a notion of the number of segments in the bar plus the layout for the grid -->
-        <div class="bar" style="--columns: 20% 0 10% 0 10% 0 10% 0 20% 0 10% 0 20%; --total-length: 400;">
-          <!-- Kind of a weird way to do it but... -->
-          <!-- The --length is the percentage length of the container -->
-          <!-- The --depth is a depth off the center line as a percentage of the container -->
-          <!-- The aligned should add to 100 as we're doing grid -->
-          <!-- The non-aligned dictate the depth being used -->
-          <!-- Needs to be the length of the depth currently plus the destination depth -->
-          <div style="--name:  segment_1; --delay:   0; --length: 20; --depth:   0;" class="bar__segment bar__segment--aligned"></div>
-          <div style="--name:  segment_2; --delay:  20; --length: 30; --depth:   0;" class="bar__segment bar__segment--front"></div>
-          <div style="--name:  segment_3; --delay:  50; --length: 10; --depth:  30;" class="bar__segment bar__segment--aligned"></div>
-          <div style="--name:  segment_4; --delay:  60; --length: 50; --depth:  30;" class="bar__segment bar__segment--back"></div>
-          <div style="--name:  segment_5; --delay: 110; --length: 10; --depth: -20;" class="bar__segment bar__segment--aligned"></div>
-          <div style="--name:  segment_6; --delay: 120; --length: 60; --depth: -20;" class="bar__segment bar__segment--front"></div>
-          <div style="--name:  segment_7; --delay: 180; --length: 10; --depth:  40;" class="bar__segment bar__segment--aligned"></div>
-          <div style="--name:  segment_8; --delay: 190; --length: 70; --depth:  40;" class="bar__segment bar__segment--back"></div>
-          <div style="--name:  segment_9; --delay: 260; --length: 20; --depth: -30;" class="bar__segment bar__segment--aligned"></div>
-          <div style="--name: segment_10; --delay: 280; --length: 50; --depth: -30;" class="bar__segment bar__segment--front"></div>
-          <div style="--name: segment_11; --delay: 330; --length: 30; --depth:  20;" class="bar__segment bar__segment--aligned"></div>
-          <div style="--name: segment_12; --delay: 360; --length: 20; --depth:  20;" class="bar__segment bar__segment--back"></div>
-          <div style="--name: segment_13; --delay: 380; --length: 20; --depth:   0;" class="bar__segment bar__segment--aligned"></div>
-        </div>
-      </div>
-    </div>
+      		<div class="loader_items_flex">
+            <svg class="pl" viewBox="0 0 160 160" width="160px" height="160px" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+					<stop offset="0%" stop-color="#000" />
+					<stop offset="100%" stop-color="#fff" />
+				</linearGradient>
+				<mask id="mask1">
+					<rect x="0" y="0" width="160" height="160" fill="url(#grad)" />
+				</mask>
+				<mask id="mask2">
+					<rect x="28" y="28" width="104" height="104" fill="url(#grad)" />
+				</mask>
+			</defs>
+			<!-- Ring -->
+			<g>
+				<g class="pl__ring-rotate">
+					<circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="hsl(223,90%,55%)" stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" transform="rotate(-45,80,80)" />
+				</g>
+			</g>
+			<g mask="url(#mask1)">
+				<g class="pl__ring-rotate">
+					<circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="hsl(193,90%,55%)" stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" transform="rotate(-45,80,80)" />
+				</g>
+			</g>
+			<!-- Ticks -->
+			<g>
+				<g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round" transform="translate(80,80)">
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-135,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-90,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-45,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(0,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(45,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(90,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(135,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(180,0,0) translate(0,40)" />
+				</g>
+			</g>
+			<g mask="url(#mask1)">
+				<g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round" transform="translate(80,80)">
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-135,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-90,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-45,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(0,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(45,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(90,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(135,0,0) translate(0,40)" />
+					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(180,0,0) translate(0,40)" />
+				</g>
+			</g>
+			<!-- Arrows -->
+			<g>
+				<g transform="translate(64,28)">
+					<g class="pl__arrows" transform="rotate(45,16,52)">
+						<path fill="hsl(3,90%,55%)" d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"/>
+						<path fill="hsl(223,10%,90%)" d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"/>
+					</g>
+				</g>
+			</g>
+			<g mask="url(#mask2)">
+				<g transform="translate(64,28)">
+					<g class="pl__arrows" transform="rotate(45,16,52)">
+						<path fill="hsl(333,90%,55%)" d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"/>
+						<path fill="hsl(223,90%,80%)" d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"/>
+					</g>
+				</g>
+			</g>
+		</svg>
+    <p class="loader_text">
+      EZRA'S - PORTFOLIO
+    </p>
+          </div>
+          <div class="stagger">
+
+          </div>
     </div>
     <header id="header">
       <nav>
@@ -147,8 +191,7 @@
             Who I Am?<br />
         </span>
       <p class="slide_1 interactable">
-        
-        HEY I'M SOUKOU EZRA, I AM A CREATIVE FULL-STACK SOFTWARE ENGINEER 
+         I'M SOUKOU EZRA, I AM A CREATIVE FULL-STACK SOFTWARE ENGINEER 
         BASED IN LAGOS, NIGERIA FOCUSED ON CREATING INTERACTIVE DIGITAL
         EXPERIENCE FOR THE WEB.
       </p>

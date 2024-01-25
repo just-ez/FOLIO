@@ -10,6 +10,7 @@
     overscroll-behavior: none;
     position: sticky;
     top: .2em;
+    z-index: 4;
 }
 /* body.scroll1 #works{
     position: static;
@@ -43,12 +44,13 @@ pointer-events: none;
 .contact_wrapper {
     height: 100vh;
     margin-top: 145em;
-    background: inherit;
+    background: #1a1a1a;
 }
 .contact {
     width: 100%;
     height: 100%;    
-    /* display: block; */
+    /* background: #1a1a1a; */
+    backdrop-filter: blur(10px);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -93,6 +95,7 @@ pointer-events: none;
     background: inherit;
     display: grid;
     place-items: end;
+    
 }
 .contact {
     width: 100%;
