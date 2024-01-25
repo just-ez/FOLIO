@@ -155,29 +155,41 @@ nav div button:hover>.bg {
     mix-blend-mode: difference;
 }
 
-.about-c {
+.about_c {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5em;
     padding: 2em 0.5em;
-    margin-left: 7em;
+    margin: 3em 0;
     z-index: -1;
     position: relative;
 }
-
-.about-c p {
-    font-size: 1.5rem;
+.about_header {
+    /* font-weight: 700; */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    margin-left: 2em;
+    scale: 0.8;
+      opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: 10px;
+    animation-range-end: contain;
+}
+.about_c p {
+    font-size: 2rem;
     color: #b4b4b4;
     z-index: 9999999999;
-    width: 50%;
+    width: 60%;
+    margin: 0 22rem;
 }
-.about-c p {
+.about_c p {
       scale: 0.8;
       opacity: 0;
     animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range-start: 100px;
+    animation-range-start: 10px;
     animation-range-end: contain;
   }
   @keyframes fade-in {
@@ -186,14 +198,14 @@ nav div button:hover>.bg {
       opacity: 1;
     }
   }
-.scroll-down {
+.scroll_down {
     display: flex;
     align-items: center;
     gap: 1em;
 }
 
 
-.arrow-container span {
+.arrow_container span {
     animation-name: arrow-anime;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;

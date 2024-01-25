@@ -47,7 +47,7 @@ timeline.to(".loader", {
   width: "0",
   ease: "power4.In",
 });
-timeline.from(".nav-p", {
+timeline.from(".nav_p", {
   opacity: 0,
   duration: 0.7,
   y: "-100%",
@@ -65,7 +65,7 @@ timeline.from(".side_line", {
   ease: "power4.In",
   stagger: 0.3,
 });
-timeline.from(".slide-up", {
+timeline.from(".slide_up", {
   opacity: 0,
   y: "50%",
   duration: 0.3,

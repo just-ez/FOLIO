@@ -20,7 +20,7 @@
     gap: 1em;
     padding: 0;
   }
-  .scroll-down a {
+  .scroll_down a {
     font-size: 0.6em;
   }
   .hero_section .hero_container_2 {
@@ -49,15 +49,15 @@
     padding: 0;
     text-align: center;
   }
-  .scroll-down {
+  .scroll_down {
     /* display: none; */
   }
-  .about-c {
+  .about_c {
     width: 95%;
     padding: 2em 0em;
     margin: 0 auto;
   }
-  .about-c p {
+  .about_c p {
     width: fit-content;
     margin: 0em;
     font-size: 1.4em;
@@ -105,7 +105,7 @@
       opacity: 1;
     }
   }
-  .w-header {
+  .w_header {
     font-size: 2rem;
     rotate: 0deg;
   }
@@ -131,13 +131,18 @@
     padding: 1em;
     gap: 2em;
   }
-  .f-links {
+  .f_links {
     display: flex;
     gap: 1em;
   }
 }
 
 @media screen and (max-width: 635px) {
+  .about_header {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 0;
+  }
   .contact_wrapper {
     margin: 0;
     height: fit-content;

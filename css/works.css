@@ -33,7 +33,7 @@ pointer-events: none;
 
     }
 
-.w-header {
+.w_header {
     font-weight: 900;
     font-size: 2rem;
     text-align: left;
@@ -81,7 +81,7 @@ pointer-events: none;
     padding: 3em 1em;
 }
 
-.f-links {
+.f_links {
     display: flex;
     gap: 1em;
     align-items: flex-start;
@@ -127,18 +127,18 @@ pointer-events: none;
     margin: 0 auto;
 }
 
-.f-links {
+.f_links {
     display: flex;
     gap: 1em;
     align-items: flex-start;
 }
-#f-links-span {
+#f_links_span {
   display: inline-block;
   position: relative;
   color: #0087ca;
 }
 
-#f-links-span::after {
+#f_links_span::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -151,7 +151,7 @@ pointer-events: none;
   transition: transform 0.25s ease-out;
 }
 
-#f-links-span:hover::after {
+#f_links_span:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
