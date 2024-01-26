@@ -86,7 +86,7 @@ nav div button {
   cursor: pointer;
   color: #aaa;
   font-size: 1em;
-  z-index: 4;
+  /* z-index: 1; */
 }
 
 nav div button .bg {

@@ -43,6 +43,7 @@ timeline.to(".stagger", {
 timeline.to(".loader", {
   duration: 0.2,
   opacity: 0,
+  zIndex: 0,
   ease: "power4.In",
 });
 timeline.from(".nav_p", {
