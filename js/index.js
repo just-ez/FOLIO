@@ -91,7 +91,7 @@ gsap.from(".line_right", {
 
 const width = screen.width;
 
-if (width < 600) {
+if (width > 600) {
   // horizontal scroll
 
   let sections = gsap.utils.toArray(".box");
